@@ -1,0 +1,674 @@
+body {
+    background-color: #000000;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hamburger {
+    display: none;
+}
+
+.cross {
+    display: none;
+}
+
+.NavBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.Spotify-logo {
+    width: 53px;
+}
+
+.invert {
+    filter: invert(1);
+}
+
+.homeIcon {
+    width: 45px;
+    padding: 7px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+}
+
+.homeIcon:hover {
+    background-color: rgba(0, 0, 0, 0.545);
+    transition: 1s ease-out all;
+    cursor: pointer;
+}
+
+.SearchIcon {
+    width: 25px;
+}
+
+.inputWrapper {
+    position: relative;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    width: 600px;
+}
+
+.input {
+    background-color: #1f1f1f;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 9px 7px;
+    width: 100%;
+    font-size: 20px;
+    padding-left: 45px;
+}
+
+.SearchIcon {
+    position: absolute;
+    left: 10%
+}
+
+.butn-login {
+    font-size: 18px;
+    font-weight: bolder;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.549);
+    color: black;
+    background-color: white;
+    padding: 7px;
+    width: 111px;
+    border-radius: 30px;
+}
+
+.butn-signup {
+    border: none;
+    font-size: 18px;
+    padding: 10px;
+    font-weight: 600;
+    background-color: transparent;
+    color: white;
+}
+
+@media screen and (max-width: 1300px) {
+    .inputWrapper {
+        width: 400px;
+    }
+
+    .SearchIcon {
+        left: 15%;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .inputWrapper {
+        width: 300px;
+    }
+
+    .input {
+        padding-left: 30px;
+    }
+
+    .SearchIcon {
+        left: 19%;
+    }
+
+    .butn-login,
+    .butn-signup {
+        font-size: 16px;
+        padding: 3px;
+    }
+
+    .butn-login {
+        width: 70px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .ButtonWrapper {
+        display: none;
+    }
+
+    .inputWrapper {
+        width: 400px;
+    }
+
+    .SearchIcon {
+        left: 14%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .Spotify-logo {
+        width: 40px;
+    }
+
+    .inputWrapper {
+        display: none;
+    }
+
+    .ButtonWrapper {
+        display: block;
+    }
+
+}
+
+
+.main {
+    display: flex;
+    gap: 15px;
+    margin: 7px 5px;
+}
+
+
+
+.left {
+    width: 75vw;
+    background-color: #121212;
+    border: 2px solid #25252584;
+    position: relative;
+}
+.right {
+    width: 25vw;
+    background-color: #121212;
+    border: 2px solid #25252584;
+    border-radius: 7px ;
+}
+
+.container-burger {
+    display: flex;
+    align-items: center;
+
+}
+
+
+@media screen and (max-width: 1350px) {
+    .hamburger {
+        display: block;
+    }
+
+    .right {
+        position: absolute;
+        left: -100%;
+        transition: 0.3s ease-in all;
+        z-index: 1;
+        width: 400px;
+    }
+
+    .left {
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .hamburger {
+        display: block;
+    }
+
+    .right {
+        position: absolute;
+        left: -100%;
+        transition: 0.2s;
+        z-index: 1;
+        width: 380px;
+    }
+
+    .left {
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .cross {
+        display: block;
+    }
+
+    .right {
+        position: absolute;
+        transition: 0.2s;
+        z-index: 1;
+        width: 400px;
+    }
+
+    .left {
+        width: 100vw;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .cross {
+        display: block;
+    }
+
+    .right {
+        position: absolute;
+        transition: 0.3s ease-in all;
+        z-index: 1;
+        width: 390px;
+    }
+
+    .left {
+        width: 100vw;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .cross {
+        display: block;
+    }
+
+    .right {
+        position: absolute;
+        transition: 0.3s ease-in all;
+        z-index: 1;
+        width: 370px;
+    }
+
+    .left {
+        width: 100vw;
+    }
+}
+
+
+.right-child {
+    margin-top: 13px;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 11px;
+    /* position: relative; */
+}
+
+.library{
+    position: relative;
+    min-height:87vh ;
+}
+.img-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 11px;
+}
+
+.libraryIcon {
+    width: 30px;
+}
+
+.img-div span {
+    font-size: 21px;
+    font-weight: 500;
+    padding-left: 8px;
+}
+
+.footer {
+    /* display: flex; */
+    margin-top: 30px;
+    font-size: 15px;
+    padding: 10px;
+
+}
+
+.footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 4px;
+    margin-bottom:30px ;
+    margin: 3px;
+    list-style: none;
+    position: absolute;
+    bottom: 0%;
+}
+
+.footer a {
+    text-decoration: none;
+    color: gray;
+
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+@media screen and (max-width: 1300px) {
+    .footer ul{
+      margin :0px ;
+    }
+}
+
+.Trending {
+    padding: 15px;
+}
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px;
+    overflow: scroll;
+    overflow-x: hidden;
+    max-height: 65vh;
+}
+
+.Card {
+    background-color: transparent;
+    padding: 10px;
+    width: 200px;
+    border-radius: 10px;
+    overflow: auto;
+    position: relative;
+}
+
+.Card:hover {
+    background-color: #252525c3;
+    transition: 0.5s ease-in-out all;
+    border: none;
+}
+
+.imgcard {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.cradPara {
+    font-size: 14px;
+    color: #b3b3b3;
+}
+
+.cradHeading {
+    font-weight: 700;
+    font-size: 15px;
+    padding-top: 14px;
+}
+
+.icon-circle {
+    background-color: rgb(10, 214, 10);
+    border-radius: 50%;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    width: 55px;
+    height: 55px;
+    margin-bottom: 9px;
+    position: absolute;
+    top: 205px;
+    right: 22px;
+    opacity: 0;
+}
+
+.Card:hover .icon-circle {
+    opacity: 1;
+    top: 123px;
+    transition: opacity 0.5s ease-in;
+}
+
+.icon-circle svg {
+    fill: black;
+    width: 50%;
+    height: 50%;
+}
+
+ .playBar {
+     position: fixed;
+     bottom: 30px;
+     border-radius: 5px;
+     background: linear-gradient(to right, #333333, #444444);
+     border-radius: 20px;
+     width: 90%;
+     min-height: 65px;
+     padding: 10px;
+     margin:0px 14px;
+     width:72vw;
+}
+
+.abovebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.songButtons {
+    display: flex;
+    justify-content: center;
+    gap: 21px;
+}
+
+.songButtons img {
+    width: 35px;
+    cursor: pointer;
+}
+
+.LibraryContainer {
+    height: 600px;
+    overflow: auto;
+    margin: 10px;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+.liOfLibrary {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    gap: 22px;
+    list-style-type: none;
+    padding: 10px;
+    border: 2px solid rgba(245, 245, 245, 0.528);
+    cursor: pointer;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+.liOfLibrary div {
+    font-size: 18px;
+}
+
+.playNow {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.playNow span {
+    font-size: 19px;
+}
+
+.musciSvg {
+    width: 35px;
+}
+
+.PlaynowImgLi {
+    width: 40px;
+}
+
+.info {
+    width: 344px;
+}
+
+.seekbar {
+    height: 6px;
+    width: 98%;
+    border-radius: 5px;
+    border: 2px solid white;
+    position: absolute;
+    bottom: 5px;
+    cursor: pointer;
+}
+
+.circle {
+    height: 15px;
+    width: 13px;
+    background-color: gainsboro;
+    border-radius: 14px;
+    position: relative;
+    bottom: 6px;
+    transition: left 0.5s all;
+    cursor: pointer;
+}
+
+
+.SongDuratio,
+.songName {
+    font-size: 19px;
+    padding: 0px 12px;
+}
+.songName{
+    width: 420px;
+}
+
+
+@media screen and (max-width: 1350px) {
+  .playBar{
+    width: 95vw;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .cardContainer{
+     justify-content: center;
+  }
+  .Card{
+    width: 50vw;
+  }
+  .Card:hover .icon-circle {
+    opacity: 1;
+    top: 223px;
+    transition: opacity 0.5s ease-in;
+}
+}
+
+@media screen and (max-width: 900px) {
+  .playBar{
+    width: 90vw;
+    bottom: 30px;
+    right: 21px;
+  }
+  .seekbar{
+    width: 95%;
+  }
+  .SongDuratio,
+.songName {
+    font-size: 19px;
+    width: auto;
+}
+.abovebar{
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+}
+
+.volumeButton{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content:center ;
+}
+
+
+
+ @media screen and (max-width: 1200px) {
+  .cardContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 12px; 
+  }
+
+  .Card {
+    width: 100%; 
+    max-width: none;
+  }
+} 
+
+@media screen and (max-width: 550px) {
+  .cardContainer {
+    grid-template-columns: 1fr;
+  }
+  .playBar{
+    right: 5px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* ---------- Global (Chromium: Chrome, Edge, Opera, Safari) ---------- */
+/* width of the whole scrollbar */
+::-webkit-scrollbar {
+    width: 17px;
+    /* vertical scrollbar width */
+    height: 12px;
+    /* horizontal scrollbar height */
+}
+
+/* the track (background) */
+::-webkit-scrollbar-track {
+    background: #0f0f10;
+    /* dark track */
+    border-radius: 12px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.6);
+}
+
+/* the draggable thumb */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #2b2b2b, #141414);
+    /* subtle gradient */
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.03);
+    /* thin outline to separate from track */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* thumb on hover for better affordance */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #3a3a3a, #1a1a1a);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.75);
+}
+
+/* a small corner square where vertical + horizontal meet */
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+/* ---------- Firefox ---------- */
+/* Firefox uses different properties */
+* {
+    scrollbar-width: thin;
+    /* auto | thin | none */
+    scrollbar-color: #2b2b2b #0f0f10;
+    /* thumb color, track color */
+}
+
+/* ---------- Example: custom scrollbar only for a scrollable element ---------- */
+/* Use this if you want the body to keep default but customize specific boxes */
+.my-scrollable {
+    max-height: 300px;
+    overflow: auto;
+}
+
+/* Chromium-only styles scoped to .my-scrollable */
+.my-scrollable::-webkit-scrollbar {
+    width: 10px;
+}
+
+.my-scrollable::-webkit-scrollbar-track {
+    background: #0b0b0b;
+}
+
+.my-scrollable::-webkit-scrollbar-thumb {
+    background: #2d2d2d;
+    border-radius: 8px;
+}
+
+.my-scrollable::-webkit-scrollbar-thumb:hover {
+    background: #3b3b3b;
+}

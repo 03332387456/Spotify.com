@@ -20,9 +20,9 @@ let currFolder;
 
 async function getSongs(folder) {
     currFolder = folder
-    let api = await fetch(`http://127.0.0.1:5500/${folder}`)
+    // let api = await fetch(`http://127.0.0.1:5500/${folder}`)
     // let api = await fetch(`${folder}`)
-    
+    let api = await fetch(`${folder}`)
     let response = await api.text()
 
 
@@ -101,8 +101,10 @@ function playMusic(track, pasue = false) {
 
 
 async function displayAlbums() {
-    let api = await fetch(`http://127.0.0.1:5500/public/Music`)
+    // let api = await fetch(`http://127.0.0.1:5500/Music`)
 //   let api = await fetch("public/Music")
+let api = await fetch("Music")
+
     let response = await api.text()
     let div = document.createElement("div")
     div.innerHTML = response
@@ -118,8 +120,10 @@ async function displayAlbums() {
 
 
             //get the meta deta of folder  
-            let api = await fetch(`http://127.0.0.1:5500/public/Music/${folder}/info.json`)
+            // let api = await fetch(`http://127.0.0.1:5500/Music/${folder}/info.json`)
             // let api = await fetch(`public/Music/${folder}/info.json`)
+            let api = await fetch(`Music/${folder}/info.json`)
+
             let response = await api.json()
             cardCont.innerHTML += `
             
@@ -131,7 +135,7 @@ async function displayAlbums() {
                   </svg>
                 </div>
 
-      <img class="imgcard" src="/public/Music/${folder}/cover.jpeg" alt="">
+      <img class="imgcard" src="Music/${folder}/cover.jpeg" alt="">
                 <h3 class="cradHeading">${response.title}</h3>
                 <p class="cradPara">${response.description}</p>
               </div>
@@ -145,7 +149,7 @@ async function displayAlbums() {
     Array.from(document.getElementsByClassName("Card")).forEach(e => {
         e.addEventListener("click", async item => {
             // console.log(item.currentTarget.dataset);
-            songs = await getSongs(`public/Music/${item.currentTarget.dataset.folder}`)
+            songs = await getSongs(`Music/${item.currentTarget.dataset.folder}`)
         })
     });
 
@@ -154,8 +158,9 @@ async function displayAlbums() {
 
 // ya function songs play kary ga 
 async function playSong() {
-    await getSongs("public/Music/EngSongs")
+    // await getSongs("Music/EngSongs")
     // await getSongs("public/Music/EngSongs")
+    await getSongs("Music/EngSongs")
     playMusic(songs[0], true)
 
 
